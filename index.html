@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfólio de Gustavo Fontoura — Estágio em Desenvolvimento de Software, BI ou Análise de Dados"
+        />
+        <title>Gustavo Fontoura | Portfólio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- ==================== NAVBAR ==================== -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo"
+                    >GF<span class="accent">.</span></a
+                >
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#skills">Tecnologias</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#experience">Experiência</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <!-- Toggle de tema claro/escuro -->
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Alternar tema"
+                    >
+                        <svg
+                            class="icon-sun"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg
+                            class="icon-moon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                            />
+                        </svg>
+                    </button>
+
+                    <!-- Botão hamburger mobile -->
+                    <button
+                        class="nav-hamburger"
+                        id="nav-hamburger"
+                        aria-label="Menu"
+                    >
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-greeting fade-in">Olá, eu sou</p>
+                    <h1 class="hero-name fade-in">
+                        Gustavo Fontoura<span class="accent">.</span>
+                    </h1>
+                    <p class="hero-tagline fade-in">
+                        Desenvolvedor & Analista de Dados
+                    </p>
+                    <p class="hero-description fade-in">
+                        Buscando <strong>estágio</strong> em Desenvolvimento de
+                        Software, BI ou Análise de Dados. <br />Disponível para
+                        <strong>Brasília</strong> (presencial/híbrido) ou
+                        <strong>remoto</strong>.
+                    </p>
+
+                    <div class="hero-cta fade-in">
+                        <a href="#projects" class="btn btn-primary"
+                            >Ver Projetos</a
+                        >
+                        <a href="#contact" class="btn btn-outline"
+                            >Fale Comigo</a
+                        >
+                    </div>
+
+                    <div class="hero-socials fade-in">
+                        <a
+                            href="https://github.com/gusta-fontoura"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/gfontoura"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                />
+                            </svg>
+                        </a>
+                        <a
+                            href="mailto:gustavofont10@gmail.com"
+                            aria-label="Email"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOBRE MIM ==================== -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title fade-in">Sobre Mim</h2>
+                <div class="about-grid">
+                    <div class="about-text fade-in">
+                        <p>
+                            Sou <strong>Gustavo Fontoura</strong>, estudante de
+                            Análise e Desenvolvimento de Sistemas no
+                            <strong>Infnet</strong> (conclusão em Dez/2026) e
+                            bacharel em
+                            <strong>Administração Pública</strong> pela UNIRIO.
+                            Essa combinação única me dá uma visão diferente:
+                            entendo processos, dados e pessoas — e hoje aplico
+                            isso tudo na prática com <strong>código</strong> e
+                            <strong>análise de dados</strong>.
+                        </p>
+                        <p>
+                            Minha jornada na tech começou com imersões
+                            intensivas (como a <strong>Piscina 42 Rio</strong>)
+                            e evoluiu para projetos reais com React, .NET e
+                            Power BI. Estou em transição de carreira e busco um
+                            <strong>estágio</strong> onde possa contribuir com
+                            minhas habilidades técnicas e minha experiência
+                            prévia em ambientes corporativos.
+                        </p>
+                    </div>
+                    <div class="about-highlights fade-in">
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🎓</span>
+                            <h3>Formação</h3>
+                            <p>ADS – Infnet<br />Adm. Pública – UNIRIO</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">📍</span>
+                            <h3>Localização</h3>
+                            <p>Brasília, DF<br />Remoto ou Presencial</p>
+                        </div>
+                        <div class="highlight-card">
+                            <span class="highlight-icon">🌍</span>
+                            <h3>Idiomas</h3>
+                            <p>
+                                Inglês – Fluente<br />Espanhol – Intermediário
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TECNOLOGIAS ==================== -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <h2 class="section-title fade-in">
+                    Tecnologias & Competências
+                </h2>
+                <div class="skills-grid">
+                    <!-- Linguagens -->
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Linguagens</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Web & Frameworks -->
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Web & Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">.NET 8</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React 18</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Arquitetura & Banco de Dados -->
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">
+                            Arquitetura & Banco de Dados
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Supabase</span>
+                            <span class="skill-tag">Entity Framework Core</span>
+                        </div>
+                    </div>
+
+                    <!-- Segurança & Qualidade -->
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">
+                            Segurança & Qualidade
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JWT / RBAC</span>
+                            <span class="skill-tag">SHA-256 + Salt</span>
+                            <span class="skill-tag">HMAC</span>
+                            <span class="skill-tag">Vitest</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- Ferramentas & Dados -->
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">
+                            Ferramentas & Dados
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Google Looker Studio</span>
+                            <span class="skill-tag">SAP</span>
+                            <span class="skill-tag">Excel Avançado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJETOS ==================== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title fade-in">Projetos</h2>
+
+                <!-- Filtros -->
+                <div class="project-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">
+                        Todos
+                    </button>
+                    <button class="filter-btn" data-filter="frontend">
+                        Frontend
+                    </button>
+                    <button class="filter-btn" data-filter="backend">
+                        Backend
+                    </button>
+                    <button class="filter-btn" data-filter="data">Dados</button>
+                    <button class="filter-btn" data-filter="fullstack">
+                        Full Stack
+                    </button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- MOB! -->
+                    <article
+                        class="project-card fade-in"
+                        data-tags="fullstack frontend"
+                    >
+                        <div class="project-header">
+                            <span class="project-year">2026</span>
+                            <span class="project-badge featured">Destaque</span>
+                        </div>
+                        <h3 class="project-title">MOB!</h3>
+                        <p class="project-description">
+                            Plataforma de doações para o Instituto Rede Abrigo.
+                            Sistema completo com processamento de pagamentos via
+                            Mercado Pago, autenticação segura e conformidade com
+                            LGPD.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React 18</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">Mercado Pago</span>
+                            <span class="tech-badge">Edge Functions</span>
+                            <span class="tech-badge">SHA-256</span>
+                        </div>
+                        <div class="project-footer">
+                            <a
+                                href="https://github.com/gusta-fontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Dashboards Comerciais -->
+                    <article class="project-card fade-in" data-tags="data">
+                        <div class="project-header">
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-title">Dashboards Comerciais</h3>
+                        <p class="project-description">
+                            Automação de fluxos de dados e visualização de KPIs
+                            para tomada de decisão. Extração via queries SQL e
+                            construção de painéis interativos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Looker Studio</span>
+                            <span class="tech-badge">SQL</span>
+                        </div>
+                        <div class="project-footer">
+                            <a
+                                href="https://github.com/gusta-fontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Flow Task -->
+                    <article class="project-card fade-in" data-tags="backend">
+                        <div class="project-header">
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3 class="project-title">Flow Task</h3>
+                        <p class="project-description">
+                            Web API assíncrona de gerenciamento de tarefas com
+                            Clean Architecture, Entity Framework Core e SQL
+                            Server. Foco em boas práticas e testabilidade.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">C#</span>
+                            <span class="tech-badge">.NET 8</span>
+                            <span class="tech-badge">EF Core</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Clean Architecture</span>
+                        </div>
+                        <div class="project-footer">
+                            <a
+                                href="https://github.com/gusta-fontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Piscina 42 Rio -->
+                    <article class="project-card fade-in" data-tags="backend">
+                        <div class="project-header">
+                            <span class="project-year">2025</span>
+                        </div>
+                        <h3 class="project-title">Piscina 42 Rio</h3>
+                        <p class="project-description">
+                            Imersão intensiva em Engenharia de Software (4
+                            semanas). Resolução de algoritmos complexos,
+                            gerenciamento de memória e ponteiros em C no
+                            ambiente UNIX.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">C</span>
+                            <span class="tech-badge">UNIX</span>
+                            <span class="tech-badge">Algoritmos</span>
+                            <span class="tech-badge">Memória</span>
+                        </div>
+                        <div class="project-footer">
+                            <a
+                                href="https://github.com/gusta-fontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Ver no GitHub →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIÊNCIA ==================== -->
+        <section class="section section-alt" id="experience">
+            <div class="container">
+                <h2 class="section-title fade-in">Experiência Profissional</h2>
+
+                <div class="timeline">
+                    <!-- Framo -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2025 — 2026</span>
+                            <h3 class="timeline-role">Assistente de Vendas</h3>
+                            <p class="timeline-company">Framo do Brasil</p>
+                            <p class="timeline-desc">
+                                Consultas SQL, tratamento de dados de
+                                vendas/estoque e suporte a operações de comércio
+                                exterior.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- RP Supply -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 - 2024</span>
+                            <h3 class="timeline-role">
+                                Assistente de Vendas / Atendimento
+                            </h3>
+                            <p class="timeline-company">RP Supply</p>
+                            <p class="timeline-desc">
+                                Relacionamento corporativo, negociações e
+                                reuniões técnicas em inglês com fornecedores
+                                internacionais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Afilio -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 — 2022</span>
+                            <h3 class="timeline-role">
+                                Analista de Atendimento
+                            </h3>
+                            <p class="timeline-company">Afilio</p>
+                            <p class="timeline-desc">
+                                Criação de dashboards em Power BI para marketing
+                                digital e análise de KPIs de performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Telecine -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Estágio</span>
+                            <h3 class="timeline-role">Operações de Conteúdo</h3>
+                            <p class="timeline-company">Telecine</p>
+                            <p class="timeline-desc">
+                                Mapeamento de processos e workflows, análise de
+                                logs para identificação e eliminação de gargalos
+                                operacionais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CVM -->
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Estágio</span>
+                            <h3 class="timeline-role">
+                                Estágio Administrativo
+                            </h3>
+                            <p class="timeline-company">
+                                CVM — Comissão de Valores Mobiliários
+                            </p>
+                            <p class="timeline-desc">
+                                Automações em planilhas para atendimento ao
+                                mercado financeiro e suporte a processos
+                                administrativos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTATO ==================== -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">Contato</h2>
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <p class="contact-text">
+                            Estou disponível para estágios em
+                            <strong>Brasília</strong> (presencial/híbrido) ou
+                            <strong>remoto</strong>. Entre em contato!
+                        </p>
+                        <div class="contact-links">
+                            <a
+                                href="mailto:gustavofont10@gmail.com"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                gustavofont10@gmail.com
+                            </a>
+                            <a
+                                href="https://wa.me/5521995199909"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                    />
+                                </svg>
+                                +55 (21) 99519-9909
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/gfontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                    />
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a
+                                href="https://github.com/gusta-fontoura"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                    />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulário simulado -->
+                    <form class="contact-form fade-in" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Seu nome"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seu@email.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Sua mensagem..."
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Enviar Mensagem
+                        </button>
+                        <p class="form-note">
+                            * Formulário simulado. Use os links ao lado para
+                            contato real.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-text">
+                    &copy; 2026 Gustavo Fontoura. Feito com dedicação &amp;
+                    código.
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
