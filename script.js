@@ -1,26 +1,9 @@
 /* ============================================================
    GUSTAVO FONTOURA — PORTFÓLIO
-   Interatividade: tema, scroll, filtros, menu mobile, formulário
+   Interatividade: scroll, filtros, menu mobile, formulário
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ==================== TEMA CLARO/ESCURO ====================
-  const themeToggle = document.getElementById('theme-toggle');
-  const html = document.documentElement;
-
-  // Verifica preferência salva ou do sistema
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-  html.setAttribute('data-theme', initialTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-  });
 
   // ==================== MENU MOBILE ====================
   const hamburger = document.getElementById('nav-hamburger');
@@ -31,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('open');
   });
 
-  // Fecha o menu ao clicar em um link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
@@ -39,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==================== SCROLL SUAVE (fallback para navegadores sem CSS smooth) ====================
+  // ==================== SCROLL SUAVE ====================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -50,23 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==================== NAVBAR: BORDA AO ROLAR ====================
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.borderBottomColor = 'var(--border-light)';
-    } else {
-      navbar.style.borderBottomColor = 'var(--border)';
-    }
-  }, { passive: true });
-
   // ==================== FILTRO DE PROJETOS ====================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Atualiza botão ativo
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -76,11 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const tags = card.getAttribute('data-tags') || '';
         if (filter === 'all' || tags.includes(filter)) {
           card.classList.remove('hidden');
-          // Reinicia animação de entrada
           card.style.opacity = '0';
-          card.style.transform = 'translateY(16px)';
+          card.style.transform = 'translateY(12px)';
           requestAnimationFrame(() => {
-            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
           });
@@ -101,22 +71,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!name || !email || !message) return;
 
-    // Simula envio — aqui você integraria com um serviço real (EmailJS, Formspree, etc.)
     const btn = form.querySelector('button');
     const originalText = btn.textContent;
-    btn.textContent = 'Mensagem enviada!';
-    btn.style.backgroundColor = '#22c55e';
+    btn.textContent = 'Enviado ✓';
+    btn.style.background = 'var(--fg)';
+    btn.style.color = 'var(--bg)';
     btn.disabled = true;
 
     setTimeout(() => {
       btn.textContent = originalText;
-      btn.style.backgroundColor = '';
+      btn.style.background = '';
+      btn.style.color = '';
       btn.disabled = false;
       form.reset();
-    }, 3000);
+    }, 2500);
   });
 
-  // ==================== ANIMAÇÕES DE ENTRADA (Intersection Observer) ====================
+  // ==================== ANIMAÇÕES DE ENTRADA ====================
   const fadeElements = document.querySelectorAll('.fade-in');
 
   const fadeObserver = new IntersectionObserver((entries) => {
@@ -128,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    rootMargin: '0px 0px -30px 0px'
   });
 
   fadeElements.forEach(el => fadeObserver.observe(el));
 
-  // ==================== NAV LINK ATIVO (seção visível) ====================
+  // ==================== NAV LINK ATIVO ====================
   const sections = document.querySelectorAll('section[id]');
   const navLinksAll = document.querySelectorAll('.nav-links a');
 
@@ -143,14 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = entry.target.getAttribute('id');
         navLinksAll.forEach(link => {
           link.style.color = link.getAttribute('href') === `#${id}`
-            ? 'var(--text-primary)'
+            ? 'var(--fg)'
             : '';
         });
       }
     });
   }, {
     threshold: 0.3,
-    rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 64}px 0px 0px 0px`
+    rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 56}px 0px 0px 0px`
   });
 
   sections.forEach(section => sectionObserver.observe(section));

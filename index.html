@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
@@ -20,9 +20,7 @@
         <!-- ==================== NAVBAR ==================== -->
         <nav class="navbar" id="navbar">
             <div class="nav-container">
-                <a href="#hero" class="nav-logo"
-                    >GF<span class="accent">.</span></a
-                >
+                <a href="#hero" class="nav-logo">GF.</a>
 
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#about">Sobre</a></li>
@@ -33,52 +31,6 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <!-- Toggle de tema claro/escuro -->
-                    <button
-                        class="theme-toggle"
-                        id="theme-toggle"
-                        aria-label="Alternar tema"
-                    >
-                        <svg
-                            class="icon-sun"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <circle cx="12" cy="12" r="5" />
-                            <line x1="12" y1="1" x2="12" y2="3" />
-                            <line x1="12" y1="21" x2="12" y2="23" />
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                            <line x1="1" y1="12" x2="3" y2="12" />
-                            <line x1="21" y1="12" x2="23" y2="12" />
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                        </svg>
-                        <svg
-                            class="icon-moon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                            />
-                        </svg>
-                    </button>
-
                     <!-- Botão hamburger mobile -->
                     <button
                         class="nav-hamburger"
@@ -97,7 +49,7 @@
                 <div class="hero-content">
                     <p class="hero-greeting fade-in">Olá, eu sou</p>
                     <h1 class="hero-name fade-in">
-                        Gustavo Fontoura<span class="accent">.</span>
+                        Gustavo Fontoura.
                     </h1>
                     <p class="hero-tagline fade-in">
                         Desenvolvedor & Analista de Dados
@@ -244,7 +196,6 @@
                         <div class="skill-tags">
                             <span class="skill-tag">C#</span>
                             <span class="skill-tag">Java</span>
-                            <span class="skill-tag">TypeScript</span>
                             <span class="skill-tag">JavaScript</span>
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">SQL</span>
@@ -258,37 +209,6 @@
                             <span class="skill-tag">.NET 8</span>
                             <span class="skill-tag">ASP.NET Core</span>
                             <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">React 18</span>
-                            <span class="skill-tag">Tailwind CSS</span>
-                        </div>
-                    </div>
-
-                    <!-- Arquitetura & Banco de Dados -->
-                    <div class="skill-category fade-in">
-                        <h3 class="skill-category-title">
-                            Arquitetura & Banco de Dados
-                        </h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Clean Architecture</span>
-                            <span class="skill-tag">RESTful APIs</span>
-                            <span class="skill-tag">SQL Server</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Supabase</span>
-                            <span class="skill-tag">Entity Framework Core</span>
-                        </div>
-                    </div>
-
-                    <!-- Segurança & Qualidade -->
-                    <div class="skill-category fade-in">
-                        <h3 class="skill-category-title">
-                            Segurança & Qualidade
-                        </h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">JWT / RBAC</span>
-                            <span class="skill-tag">SHA-256 + Salt</span>
-                            <span class="skill-tag">HMAC</span>
-                            <span class="skill-tag">Vitest</span>
-                            <span class="skill-tag">Git</span>
                         </div>
                     </div>
 
@@ -302,7 +222,6 @@
                             <span class="skill-tag">Docker</span>
                             <span class="skill-tag">Power BI</span>
                             <span class="skill-tag">Google Looker Studio</span>
-                            <span class="skill-tag">SAP</span>
                             <span class="skill-tag">Excel Avançado</span>
                         </div>
                     </div>
@@ -326,7 +245,6 @@
                     <button class="filter-btn" data-filter="backend">
                         Backend
                     </button>
-                    <button class="filter-btn" data-filter="data">Dados</button>
                     <button class="filter-btn" data-filter="fullstack">
                         Full Stack
                     </button>
@@ -369,34 +287,6 @@
                         </div>
                     </article>
 
-                    <!-- Dashboards Comerciais -->
-                    <article class="project-card fade-in" data-tags="data">
-                        <div class="project-header">
-                            <span class="project-year">2026</span>
-                        </div>
-                        <h3 class="project-title">Dashboards Comerciais</h3>
-                        <p class="project-description">
-                            Automação de fluxos de dados e visualização de KPIs
-                            para tomada de decisão. Extração via queries SQL e
-                            construção de painéis interativos.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Power BI</span>
-                            <span class="tech-badge">Looker Studio</span>
-                            <span class="tech-badge">SQL</span>
-                        </div>
-                        <div class="project-footer">
-                            <a
-                                href="https://github.com/gusta-fontoura"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
-                                Ver no GitHub →
-                            </a>
-                        </div>
-                    </article>
-
                     <!-- Flow Task -->
                     <article class="project-card fade-in" data-tags="backend">
                         <div class="project-header">
@@ -414,36 +304,6 @@
                             <span class="tech-badge">EF Core</span>
                             <span class="tech-badge">SQL Server</span>
                             <span class="tech-badge">Clean Architecture</span>
-                        </div>
-                        <div class="project-footer">
-                            <a
-                                href="https://github.com/gusta-fontoura"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
-                                Ver no GitHub →
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Piscina 42 Rio -->
-                    <article class="project-card fade-in" data-tags="backend">
-                        <div class="project-header">
-                            <span class="project-year">2025</span>
-                        </div>
-                        <h3 class="project-title">Piscina 42 Rio</h3>
-                        <p class="project-description">
-                            Imersão intensiva em Engenharia de Software (4
-                            semanas). Resolução de algoritmos complexos,
-                            gerenciamento de memória e ponteiros em C no
-                            ambiente UNIX.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">C</span>
-                            <span class="tech-badge">UNIX</span>
-                            <span class="tech-badge">Algoritmos</span>
-                            <span class="tech-badge">Memória</span>
                         </div>
                         <div class="project-footer">
                             <a
@@ -693,8 +553,7 @@
         <footer class="footer">
             <div class="container">
                 <p class="footer-text">
-                    &copy; 2026 Gustavo Fontoura. Feito com dedicação &amp;
-                    código.
+                    &copy; 2026 Gustavo Fontoura. Em busca do estágio &amp;
                 </p>
             </div>
         </footer>
